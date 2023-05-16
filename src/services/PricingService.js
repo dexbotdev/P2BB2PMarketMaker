@@ -88,16 +88,19 @@ class PricingService {
                     priceNative: response.data.pair.priceNative,
                     priceUsd: response.data.pair.priceUsd,   
                 }
-
                 const ordersOpen = await getOpenOrders(wallet);
 
+                const quantity = config.fundstoUsePerTrade/(priceData.priceNative);
+                console.log((quantity).toFixed(2))
+                console.log(priceData)
                 if(ordersOpen.length === 0){
-
-                    const buyLimit = ethers.utils.parseUnits(config.fundstoUsePerTrade/(priceData.priceNative*(1+config.upperRange/100)).toFixed(15)+"",18)
-                    const sellLimit = ethers.utils.parseUnits(config.fundstoUsePerTrade/(priceData.priceNative*(1-config.lowerRange/100)).toFixed(15)+"",18) 
  
+                    const buyLimit = ethers.utils.parseUnits((config.fundstoUsePerTrade/(Number(quantity.toFixed(2))*(1+config.upperRange/100))).toFixed(8)+"",18)
+                    const sellLimit = ethers.utils.parseUnits((config.fundstoUsePerTrade/(Number(quantity.toFixed(2))*(1-config.lowerRange/100))).toFixed(8)+"",18) 
+ 
+
                     await approveToken(sellLimit.toString());  
-                    await placeLimitOrders(buyLimit.toString(),sellLimit.toString());
+                    await placeLimitOrders(buyLimit.toString(),sellLimit.toString(),quantity.toFixed(2));
 
 
                 } else {
@@ -108,7 +111,7 @@ class PricingService {
                  
             })
             .catch(function (error) {
-                console.log(1);
+                console.log(new String(error.error));
             });
              
         }, 1000)
