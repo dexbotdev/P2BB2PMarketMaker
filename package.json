@@ -1,0 +1,28 @@
+{
+  "name": "pancakeswap-mmbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@godtoy/pancakeswap-sdk-v2": "2.2.0",
+    "@ptkdev/logger": "^1.8.0",
+    "axios": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "emitter": "^0.0.5",
+    "ethers": "5.1.4",
+    "tslib": "^2.5.0",
+    "web3": "^1.10.0"
+  },
+  "devDependencies": {
+    "@gelatonetwork/limit-orders-lib": "^4.5.0"
+  }
+}

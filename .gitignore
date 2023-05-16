@@ -1,0 +1,11 @@
+node_modules
+.env
+index copy 2.js
+index copy.js
+config.js
+abi.js
+yarn-error.log
+yarn.lock
+logs/debug.log
+logs/errors.log
+package-lock.json
