@@ -1,13 +1,8 @@
 {
-    "privateKey":"0x5cd071930fe1eafa08c0156f9b22a7042544f2dcd20b21988dfbd0eacc1836a7",
-    "upperRange":5,
-    "lowerRange":5,
-    "fundstoUsePerTrade":0.75,
-    "tokenAddress":"0x1b83b2d91f1774582f37c2a95a847d4ed38d1019",
-    "pairAddress":"0x256e07b351ea0bad2b115ded9f944cd218edae03",
-    "quoteToken":"WBNB",
-    "quoteTokenAddress":"0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
-    "dexname":"pancakeswap", 
-    "RPC":"https://bsc-dataseed.binance.org/"
+    "apiKey":"786cb5d2951e529eb932932ced762dce",
+    "secretKey":"96e3028196b4bfbf5783026874e1d45a",
+    "range":5, 
+    "fundstoUsePerTrade":150, 
+    "pair":"TFTC_USDT"
 }
     

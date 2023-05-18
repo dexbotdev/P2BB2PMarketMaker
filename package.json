@@ -16,9 +16,12 @@
     "@godtoy/pancakeswap-sdk-v2": "2.2.0",
     "@ptkdev/logger": "^1.8.0",
     "axios": "^1.4.0",
+    "crypto": "^1.0.1",
     "dotenv": "^10.0.0",
     "emitter": "^0.0.5",
     "ethers": "5.1.4",
+    "node-notifier": "^10.0.1",
+    "request": "^2.88.2",
     "tslib": "^2.5.0",
     "web3": "^1.10.0"
   },
